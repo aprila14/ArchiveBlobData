@@ -5,10 +5,12 @@
       "type": "appInsights.azure",
       "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING"
     },
-    "storage1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/sparkhubtasmotaiot841b",
+    "storage2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/ArchiveAppendBlolb/providers/Microsoft.ServiceLinker/linkers/MjrmcIZYuCzzhwaqQB1uAJ2Z7M2FylvUlPAd5OB3_06B71D38D6, /subscriptions/6d5f2bf4-50f6-45c4-ac71-f5a9ccf3c55e/resourceGroups/Sparkhub-Tasmota-IoT/providers/Microsoft.Web/sites/ArchiveAppendBlolb/providers/Microsoft.ServiceLinker/linkers/MjrmcIZYuCzzhwaqQB1uAJ2Z7M2FylvUlPAd5OB3_4FC500DF66",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/pressuresensorstorage",
       "type": "storage.azure",
-      "connectionId": "AzureWebJobsStorage"
+      "connectionId": "MjrmcIZYuCzzhwaqQB1uAJ2Z7M%2FylvUlPAd5OB3syQk%3D"
     }
   }
 }

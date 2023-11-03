@@ -21,7 +21,7 @@ namespace ArchiveBlobData
         }
 
         [FunctionName("ArchiveBlobFunction")]
-        public async Task Run([TimerTrigger("0 0 0 * * *")] TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 * * * * *")] TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             var connectionString = _configuration.GetValue<string>("AzureFunctionsJobHost:Configurations:Connectionstring");
