@@ -21,7 +21,7 @@ namespace ArchiveBlobData
         }
 
         [FunctionName("ArchiveBlobFunction")]
-        public async Task Run([TimerTrigger("0 * * * * *")] TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 0 * * * *")] TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             var connectionString = _configuration.GetValue<string>("AzureFunctionsJobHost:Configurations:Connectionstring");
@@ -39,7 +39,7 @@ namespace ArchiveBlobData
                 await foreach (var blobPages in result.AsPages(continuationToken, pageSize))
                 {
                     continuationToken = blobPages.ContinuationToken;
-                    blobFolders.AddRange(blobPages.Values.Where(b => b.IsPrefix && b.Prefix.Contains("VoCuSensor1-archive")).Select(b => b.Prefix));
+                    blobFolders.AddRange(blobPages.Values.Where(b => b.IsPrefix && b.Prefix.Contains("LevelSense-archive")).Select(b => b.Prefix));
                     blobItems.AddRange(blobPages.Values.Where(b => b.IsBlob).Select(b => b.Blob));
                 }
             } while (!string.IsNullOrWhiteSpace(continuationToken));

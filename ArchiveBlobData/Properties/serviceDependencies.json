@@ -7,6 +7,9 @@
     "storage2": {
       "type": "storage",
       "connectionId": "MjrmcIZYuCzzhwaqQB1uAJ2Z7M%2FylvUlPAd5OB3syQk%3D"
+    },
+    "secrets1": {
+      "type": "secrets"
     }
   }
 }
