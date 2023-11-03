@@ -1,0 +1,17 @@
+{
+    "version": "2.0",
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  },
+  "Configurations": {
+    "StorageAccountName": "iotstoragetasmota",
+    "ContainerName": "outcontainervocu",
+    "SASToken": "sp=racwdlmeop&st=2023-09-30T07:24:55Z&se=2033-09-30T15:24:55Z&spr=https&sv=2022-11-02&sr=c&sig=%2BWj0pcGDIVVXmfbjCohGTKhoQjN0VVb7n5YJ%2B8wxIVc%3D",
+    "Connectionstring": "DefaultEndpointsProtocol=https;AccountName=iotstoragetasmota;AccountKey=VPh+caeY0oL/wAq/Cdjn8iTl/6v6G4/zGFmAwJFhOUup39RYkfRX6uTsK15ywYgWvzeu5xxt46Jd+AStJ5LvPA==;EndpointSuffix=core.windows.net"
+  }
+}
