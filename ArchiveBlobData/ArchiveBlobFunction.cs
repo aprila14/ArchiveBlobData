@@ -48,7 +48,8 @@ namespace ArchiveBlobData
             foreach (var blobItem in blobItems)
             {
                 var b1 = client.GetBlobClient(blobItem.Name);
-                var targetBlobClient = client.GetBlockBlobClient($"{blobFolders[0]}{blobItem.Name}-{"year:"}{DateTime.Now.ToString("yyyy")}-{"month:"}{DateTime.Now.ToString("MM")}-{"day:"}{DateTime.Now.ToString("dd")}-{"hour:"}{DateTime.Now.ToString("HH")}-{"minutes:"}{DateTime.Now.ToString("mm")}-{"seconds:"}{DateTime.Now.ToString("ss")}");
+                //var targetBlobClient = client.GetBlockBlobClient($"{blobFolders[0]}{blobItem.Name}-{"year:"}{DateTime.Now.ToString("yyyy")}-{"month:"}{DateTime.Now.ToString("MM")}-{"day:"}{DateTime.Now.ToString("dd")}-{"hour:"}{DateTime.Now.ToString("HH")}-{"minutes:"}{DateTime.Now.ToString("mm")}-{"seconds:"}{DateTime.Now.ToString("ss")}");
+                var targetBlobClient = client.GetBlockBlobClient($"{blobFolders[0]}{blobItem.Name}");
                 using (var stream = new MemoryStream())
                 {
                     await b1.DownloadToAsync(stream);
